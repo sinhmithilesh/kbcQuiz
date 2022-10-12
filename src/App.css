@@ -1,0 +1,212 @@
+.app{
+  height: 100vh;
+  display: flex; 
+  background-color: #020230;
+  color:white;
+}
+
+.main{
+  width: 75%;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #020230), url("../../../../Downloads/kbc.jpg") center ;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.top{
+  height: 50%;
+  position: relative;
+}
+
+.timer{
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  align-items: center ;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 700 ;
+  position: absolute;
+  bottom: 10px;
+  left: 70px
+}
+
+
+.bottom{
+  height: 50%;
+}
+
+.trivia{
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+.question{
+  width: 80%;
+  background:linear-gradient(#100241,black);
+  border: 2px solid white;
+  text-align: center;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 18px;
+}
+
+.answers{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.answer{
+  width: 38%;
+  padding: 14px;
+  text-align: center;
+  background : linear-gradient(#0e0124, #22074d);
+  border : 1px solid white;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 10px 20px 5px;
+  cursor: pointer;
+}
+
+
+.answer:hover,  
+.answer.active{
+  background: rgb(40, 40, 148);
+}
+
+.answer.correct{
+  animation: correct 3s ease forwards;
+}
+
+
+@keyframes correct{
+  0%,16%,32%{
+    background: rgb(40, 40, 148);
+  }
+  8%,24%,40%{
+    background : linear-gradient(#0e0124, #22074d);
+  }
+  45%, 100%{
+    background: green;
+  }
+}
+
+
+
+.answer.wrong{
+  animation: wrong 3s ease forwards;
+}
+
+
+@keyframes wrong{
+  0%,16%,32%{
+    background: rgb(40, 40, 148);
+  }
+  8%,24%,40%{
+    background : linear-gradient(#0e0124, #22074d);
+  }
+  45%, 100%{
+    background: rgba(175, 18, 57, 0.951);
+  }
+}
+
+
+
+
+
+
+.pyramid{
+  width: 25% ;
+  border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} 
+
+
+.moneyList{
+  list-style: none;
+  width: 100%;
+}
+
+
+.moneyListItem{
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.moneyListItem.active{
+  background-color: teal ;
+}
+
+.moneyListItemNumber{
+  font-style: 18px;
+  font-weight: 100;
+  width: 30%;
+}
+
+.moneyListItemAmount{
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.endText{
+  /* position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0; */
+  margin: auto;
+}
+
+.start{
+  width: 300px;
+  padding: 5px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: auto;  
+}
+
+.startInput{
+  width: 100%;
+  height: 40px;
+  outline: #020230;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  
+}
+
+.startButton{
+  border:none;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px 30px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.688);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.startButton:hover{
+  background: linear-gradient(#5c536d, #270b54);
+  color:white;
+}
