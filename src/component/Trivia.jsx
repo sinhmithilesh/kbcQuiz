@@ -5,7 +5,7 @@ import wait  from "../sounds/wait.mp3"
 import wrong from "../sounds/wrong.mp3"
 import correct from "../sounds/correct.mp3"
 
-export default function Trivia({ data,stop, setStop, questionNumber,setQuestionNumber, holdCount, setHoldCount}) {
+export default function Trivia({ data, setStop, questionNumber,setQuestionNumber, setHoldCount}) {
 
   const [question , setQuestion] = useState(null)
   const [selectedAnswer , setSelectedAnswer] = useState(null)
@@ -33,6 +33,7 @@ export default function Trivia({ data,stop, setStop, questionNumber,setQuestionN
     }, duration)
   }
 
+
   const handleClick = (answer) => {
     setHoldCount(true)
     setSelectedAnswer(answer)
@@ -41,18 +42,18 @@ export default function Trivia({ data,stop, setStop, questionNumber,setQuestionN
     delay(2000, ()=>{
       setClassName(answer.correct ? "answer correct" : "answer wrong")
     });
-
+  
     delay(5000, ()=>{
       if(answer.correct){
         correctAnswer()
         delay(1500, ()=>{
           setQuestionNumber(prev=> prev + 1)
           setIsGameOn(true)
-          setSelectedAnswer(null)  // once answer selected make null
+          setSelectedAnswer(null)  // once answer selected make null m null. 
         })
       }else{
         wrongAnswer()
-        delay(1500, ()=>{
+        delay(1500, ()=>{  
           setStop(true)
           setIsGameOn(false)
         })
@@ -67,6 +68,7 @@ export default function Trivia({ data,stop, setStop, questionNumber,setQuestionN
     <div className="trivia">
         <div className="question">{question?.question}</div>
         <div className="answers">
+          
             {question?.answer.map((ans,index) => (
               <div 
                 key={index} 
@@ -74,8 +76,7 @@ export default function Trivia({ data,stop, setStop, questionNumber,setQuestionN
                 onClick={()=>handleClick(ans)}
                 >{ans.text}</div>
             ))}
-            
-            
+                       
         </div>
     </div>
   )

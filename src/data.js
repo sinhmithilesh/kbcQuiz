@@ -30,7 +30,7 @@ export const data = [
                 correct : true
             },
             {
-                text: "for USA only%",
+                text: "for USA only",
                 correct : false
             },
             {
@@ -45,22 +45,22 @@ export const data = [
     },
     {
         id: 3,
-        question: "Which of these snacks is often paired with Jalebi in Gujarat, especially on Dussehra?",
+        question: "Cold brew, Latte, Espresso are all examples of which beverage?",
         answer: [
             {
-                text: "gulab-jamun",
+                text: "Tea",
                 correct : false
             },
             {
-                text: "samosa",
+                text: "Fruit-Juice",
                 correct : false
             },
             {
-                text: "chhole",
+                text: "Lassi",
                 correct : false
             }, 
             {
-                text: "fafda",
+                text: "Coffee",
                 correct : true
             }
         ]
@@ -89,40 +89,91 @@ export const data = [
     },
     {
         id: 5,
-        question: "",
+        question: "the legendary role  of 'Rocky' in film KGF played by which Indian Actor",
         answer: [
             {
-                text: "70%",
+                text: "Prabhas",
                 correct : false
             },
             {
-                text: "100%",
+                text: "Yash",
                 correct : true
             },
             {
-                text: "90%",
+                text: "Allu Arjun",
                 correct : false
             },
             {
-                text: "99%",
+                text: "Mahesh Babu",
                 correct : false
             }
         ]
     },
     {
         id: 6,
-        question: "",
-        answer: []
+        question: "Who was the first Indian woman to win a medal in the Olympics?",
+        answer: [
+            {
+                text: "P.T. Usha",
+                correct : true
+            },
+            {
+                text: "Narayani Dave",
+                correct : true
+            },
+            {
+                text: "Mrinal Mahant",
+                correct : false
+            },
+            {
+                text: "Avanti Nagor",
+                correct : false
+            }
+        ]
     },
     {
         id: 7,
-        question: "",
-        answer: []
+        question: "Arunachal Pradesh was earlier known by which of these names?",
+        answer: [
+            {
+                text: "Northern frontier territory",
+                correct : false
+            },
+            {
+                text: "Arunchal karomi united",
+                correct : true
+            },
+            {
+                text: " Northeast Frontier Agency",
+                correct : false
+            },
+            {
+                text: "North-Ease State Alliance",
+                correct : false
+            }
+        ]
     },
     {
         id: 8,
-        question: "",
-        answer: []
+        question: "In which state of India is the town of Jamtara located",
+        answer: [
+            {
+                text: "Jharkhand",
+                correct : true
+            },
+            {
+                text: "Bihar",
+                correct : false
+            },
+            {
+                text: "Odisha",
+                correct : false
+            },
+            {
+                text: "West Bengal",
+                correct : false
+            }
+        ]
     },
     {
         id: 9,
@@ -178,9 +229,8 @@ export const data = [
 ]
 
 export const moneyPyramid = [
-    { id: 18, amount: '7 Crore' },
-    { id: 17, amount: '1 Crore' },
-    { id: 16, amount: 5000000 },
+    { id: 17, amount: '7 Crore'},
+    { id: 16, amount: '1 Crore'},
     { id: 15, amount: 5000000 },
     { id: 14, amount: 2500000 },
     { id: 13, amount: 1250000 },

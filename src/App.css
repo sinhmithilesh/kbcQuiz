@@ -7,8 +7,10 @@
 
 .main{
   width: 75%;
-  background: linear-gradient(to bottom, rgba(0,0,0,0), #020230), url("../../../../Downloads/kbc.jpg") center ;
+  background: linear-gradient(to bottom, rgba(0,0,0,0), #020230), url("../../../../Downloads/kbc.jpg") center;
+  background-size: cover;
   background-repeat: no-repeat;
+  border: 1px solid white;
   display: flex;
   flex-direction: column;
 
@@ -169,8 +171,17 @@
   bottom: 0;
   left: 0;
   right:0; */
-  margin: auto;
+  margin-bottom: 10px;
 }
+
+.gameEnd{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 
 .start{
   width: 300px;

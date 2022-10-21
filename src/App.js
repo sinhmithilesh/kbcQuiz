@@ -7,7 +7,7 @@ import Start from './component/Start'
 import { data, moneyPyramid } from './data'
 
 export default function App() {
-  const [username, setUserName] = useState()
+  const [username, setUserName] = useState("")
   const [questionNumber, setQuestionNumber] = useState(1)
   const [stop, setStop] = useState(false)
   const [holdCount, setHoldCount] = useState(false)
@@ -25,7 +25,10 @@ export default function App() {
   }, [questionNumber])
 
   
-  console.log("holdCount", holdCount)
+  const playAgain = () => {
+    window.location.reload()
+  }
+
 
   return (
     <div className="app">
@@ -33,7 +36,10 @@ export default function App() {
         <>
           <div className="main">
             {stop ? (
-              <h1 className="endText">You earned : Rs {earned} </h1>
+              <div className='gameEnd'>
+              <h1 className="endText">{username}, you earned : Rs {earned} </h1>
+              <button className='startButton' onClick={playAgain}>Play Again</button>
+              </div>
             ) : (
               <>
                 <div className="top">
@@ -62,7 +68,7 @@ export default function App() {
           </div>
           <div className="pyramid">
             <ul className="moneyList">
-              {moneyPyramid.map((amount) => (
+              {!stop ? moneyPyramid.map((amount) => (
                 <li
                   key={amount.id}
                   className={
@@ -70,12 +76,12 @@ export default function App() {
                       ? 'moneyListItem active'
                       : 'moneyListItem'
                   }
-                  onClick={() => setQuestionNumber(amount.id)}
+                  // onClick={() => setQuestionNumber(amount.id)}
                 >
                   <span className="moneyListItemNumber">{amount.id}</span>
                   <span className="moneyListItemAmount">{amount.amount}</span>
                 </li>
-              ))}
+              )) : <h3 className='moneyListItem'>Thanks for playing</h3>}
             </ul>
           </div>
         </>
