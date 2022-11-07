@@ -76,9 +76,9 @@ export default function App() {
                       ? 'moneyListItem active'
                       : 'moneyListItem'
                   }
-                  // onClick={() => setQuestionNumber(amount.id)}
+                  onClick={() => setQuestionNumber(amount.id)}
                 >
-                  <span className="moneyListItemNumber">{amount.id}</span>
+                  <span className="moneyListItemNumber">{amount.id}.</span>
                   <span className="moneyListItemAmount">{amount.amount}</span>
                 </li>
               )) : <h3 className='moneyListItem'>Thanks for playing</h3>}

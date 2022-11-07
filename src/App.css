@@ -10,11 +10,8 @@
   background: linear-gradient(to bottom, rgba(0,0,0,0), #020230), url("../../../../Downloads/kbc.jpg") center;
   background-size: cover;
   background-repeat: no-repeat;
-  border: 1px solid white;
   display: flex;
   flex-direction: column;
-
-
 }
 
 .top{
@@ -61,6 +58,9 @@
   font-size: 18px;
 }
 
+
+
+
 .answers{
   width: 100%;
   display: flex;
@@ -103,7 +103,6 @@
     background: green;
   }
 }
-
 
 
 .answer.wrong{
@@ -220,4 +219,105 @@
 .startButton:hover{
   background: linear-gradient(#5c536d, #270b54);
   color:white;
+}
+
+
+
+
+@media (max-width: 768px) {
+  .question{
+    width: 80%;
+  }
+
+  .answer{
+    width: 35%;
+  }
+
+  .moneyListItemAmount{
+    font-size: 17px;
+    font-weight: 300;
+  }
+}
+
+
+@media (max-width:620px) {
+
+  .pyramid{
+    width: 35%
+  }
+
+  .question{
+    font-size: 16px;
+    width: 75%;
+  }
+  
+  .answer{
+    font-size: 15px;
+    width: 30%;
+  }
+}
+
+@media (max-width:500px) {
+
+  .trivia{
+    height: 50%;
+  }
+
+  .pyramid{
+    margin-top: 10%;
+    border: none;
+    overflow-x: hidden;
+  }
+
+  .question{
+    font-size: 14px;
+    width: 80%;
+  }
+
+  .timer{
+    bottom: 36%;
+    left: 3px;
+  }
+  .answers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+  
+  }
+
+  .answer{
+    width: 50%;
+    font-size: 13px;
+  }
+
+  .moneyListItemAmount{
+    font-size: 15px;
+    font-weight: 300;
+    margin-right: 10px;
+  }
+
+  .moneyListItemNumber{
+    margin-right: 5px;
+  }
+
+  /* .gameEnd{
+    width: 60%;
+    margin: auto
+  } */
+
+  .endText{
+    font-weight: 500;
+    font-size: 16px;
+    background-color: white;
+    color: #22074d;
+    padding: 2px 5px;
+    border-radius: 3px;
+    text-align: center;
+  }
+
+  .moneyListItem{
+    font-size: 15px;
+  }
+ 
 }
